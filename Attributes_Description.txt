@@ -1,0 +1,51 @@
+SCHOOL
+GP:0
+MS:1
+
+
+GENDER
+Male: 0
+Female :1
+
+
+ADDRESS
+Urban:0
+Rural:1
+
+
+PARENT_STATUS
+alive:0
+dead:1
+
+
+MOTHER AND FATHER JOB
+Home maker:0
+health:1
+other:2
+services:3
+teacher:4
+
+
+REASON
+course:0
+home:1
+other:2
+reputation:3
+
+
+GUARDIAN
+mother:0
+father:1
+other:2 
+
+
+SCHOOLSUP & FAMSUP & PAID & ACTIVITIES & NURSERY & PAID & ACTIVITIES
+yes:0
+no:1
+
+
+MOTHER AND FATHER EDUCATION
+none:0
+primary_education:1
+secondary_education:2
+higher_education:3

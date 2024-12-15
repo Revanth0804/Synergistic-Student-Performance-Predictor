@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html style=" overflow: scroll; ">
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Student Performance</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+
+	<h1>Synergistic Performance Forecasting: Harnessing Gradient Boost and Linear Discriminant Analysis for Student Achievement Prediction </h1>
+
+ <div class="login">
+
+	<h1><br> </h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	School:<input type="text" name="school" placeholder="School" required="required" />
+        Gender:<input type="text" name="sex" placeholder="Gender" required="required" />
+	    Age:<input type="text" name="age" placeholder="Age" required="required" />
+		Address:<input type="text" name="address" placeholder="Address" required="required" />
+		  Family Size:<input type="text" name="famsize" placeholder="Famsize" required="required" />
+		    Parent Status:<input type="text" name="Pstatus" placeholder="Pstatus" required="required" />
+		      Mother Education:<input type="text" name="Medu" placeholder="M_edu" required="required" />
+			 Father Education:<input type="text" name="Fedu" placeholder="F_edu" required="required" />
+			   Mother Job:<input type="text" name="Mjob" placeholder="Mjob" required="required" />
+        		    Father Job:<input type="text" name="Fjob" placeholder="Fjob" required="required" />
+	    Reason:<input type="text" name="reason" placeholder="reason" required="required" />
+		Guardian:<input type="text" name="guardian" placeholder="guardian" required="required" />
+		  Travel time:<input type="text" name="traveltime" placeholder="travel_time" required="required" />
+		    Study Time:<input type="text" name="studytime" placeholder="study_time" required="required" />
+		      Failures:<input type="text" name="failures" placeholder="failures" required="required" />
+			  Schools up:<input type="text" name="schoolsup" placeholder="schoolsup" required="required" />
+			   Famsup:<input type="text" name="famsup" placeholder="famsup" required="required" />
+		          Paid:<input type="text" name="paid" placeholder="paid" required="required" />
+		           Acitivities:<input type="text" name="activities" placeholder="activities" required="required" />
+			      Nursery:<input type="text" name="nursery" placeholder="nursery" required="required" />
+	     Higher:<input type="text" name="higher" placeholder="higher" required="required" />
+		Internet:<input type="text" name="internet" placeholder="internet" required="required" />
+		  Romantic:<input type="text" name="romantic" placeholder="romantic" required="required" />
+		    Famrel:<input type="text" name="famrel" placeholder="farmrel" required="required" />
+		      Freetime:<input type="text" name="freetime" placeholder="freetime" required="required" />
+			 
+			  
+			      Absences:<input type="text" name="absences" placeholder="absences" required="required" />
+		
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
